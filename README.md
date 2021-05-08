@@ -33,8 +33,9 @@ $ docker-compose version
 - start a new container from an image and run in the background : ```$ docker run -d Image```
 - start a new container from an image and map all ports : ```$ docker run -p HostPort:DockerPort Image```
 #### Pause / Unpause / Wait
-- 
-- 
+- suspends all processes in the specified containers : ```$ docker pause ContainerID``` or ```$ docker pause ContainerName```
+- un-suspends all processes in the specified containers : ```$ docker unpause ContainerID``` or ```$ docker unpause ContainerName```
+- block until one or more containers stop and then print their exit codes : ```$ docker wait ContainerID``` or ```$ docker wait ContainerName```
 #### Stop / Kill
 - stop a running container : ```$ docker stop ContainerID``` or ```$ docker stop ContainerName```
 - kill a running container : ```$ docker kill ContainerID``` or ```$ docker stop ContainerName```
@@ -44,3 +45,11 @@ $ docker-compose version
 - delete a container : ```$ docker rm ContainerID``` or ```docker rm ContainerName```
 - delete a running container : ```$ docker rm -f ContainerID``` or ```docker rm -f ContainerName```
 - delete stopped containers : ```$ docker container prune```
+#### Rename
+- rename a container : ``$ docker rename ContainerName NewContainerName```
+#### Update
+- 
+#### Attach
+- 
+#### Information
+- 
