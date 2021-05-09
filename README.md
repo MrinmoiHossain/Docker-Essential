@@ -32,6 +32,7 @@ $ docker-compose version
 - start a new container from an image and assign it a name : ```$ docker run --name Name Image```
 - start a new container from an image and run in the background : ```$ docker run -d Image```
 - start a new container from an image and map all ports : ```$ docker run -p HostPort:DockerPort Image```
+- start a new container from an image and removes a container after it exits : ```$ docker run --rm Image```
 #### Pause / Unpause / Wait
 - suspends all processes in the specified containers : ```$ docker pause ContainerID``` or ```$ docker pause ContainerName```
 - un-suspends all processes in the specified containers : ```$ docker unpause ContainerID``` or ```$ docker unpause ContainerName```
@@ -46,10 +47,16 @@ $ docker-compose version
 - delete a running container : ```$ docker rm -f ContainerID``` or ```docker rm -f ContainerName```
 - delete stopped containers : ```$ docker container prune```
 #### Rename
-- rename a container : ``$ docker rename ContainerName NewContainerName```
+- rename a container : ```$ docker rename ContainerName NewContainerName```
 #### Update
-- 
+- update the configuration of one or more containers : ```$ docker update ContainerName```
 #### Attach
-- 
+- attach local standard input, output, and error streams to a running container : ```$ docker attach ContainerID``` or ```$ docker attach ContainerName```
 #### Information
-- 
+- show the container output (stdout & stderror) : ```$ docker logs ContainerID``` or ```$ docker logs ContainerName```
+- show low level information on the container : ```$ docker inspect ContainerID``` or ```$ docker inspect ContainerName```
+- list the process running inside the container : ```$ docker top ContainerID``` or ```$ docker top ContainerName```
+- to get real-time events from the server : ```$ docker events```
+- list port mappings or a specific mapping for the container : ```$ docker port ContainerID``` or ```$ docker port ContainerName```
+- display a live stream of container(s) resource usage statistics : ```$ docker stats```
+- inspect changes to files or directories on a container’s filesystem : ```$ docker diff ContainerID``` or ```$ docker diff ContainerName```
